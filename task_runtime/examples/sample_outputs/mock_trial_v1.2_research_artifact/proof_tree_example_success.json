@@ -1,0 +1,815 @@
+{
+  "task_id": "T1eac22e5",
+  "parent_id": null,
+  "contract": {
+    "goal": "Chain executor: Who founded the mock trial program at the college attended by the Trump-appointed Supreme Court justice whose father's first name is Michael?",
+    "output_schema": null,
+    "verifier": null,
+    "success_criteria": [],
+    "inputs": {
+      "kind": "chain_executor",
+      "slot_order": [
+        "justice",
+        "college",
+        "founder"
+      ],
+      "final_answer_slot": "founder"
+    },
+    "allowed_tools": null,
+    "budget": {
+      "max_llm_calls": 0,
+      "max_children": 3,
+      "max_depth": 2
+    },
+    "repair_policy": {
+      "enabled": false,
+      "max_attempts": 3
+    },
+    "deps": []
+  },
+  "contract_level": 4,
+  "attempts": [],
+  "children": [
+    {
+      "task_id": "Te7e04269",
+      "parent_id": "T1eac22e5",
+      "contract": {
+        "goal": "executor: resolve 'justice' slot",
+        "output_schema": null,
+        "verifier": null,
+        "success_criteria": [],
+        "inputs": {
+          "kind": "executor_slot",
+          "slot_name": "justice",
+          "consumed_slots": {}
+        },
+        "allowed_tools": null,
+        "budget": {
+          "max_llm_calls": 0,
+          "max_children": 0,
+          "max_depth": 1
+        },
+        "repair_policy": {
+          "enabled": false,
+          "max_attempts": 3
+        },
+        "deps": []
+      },
+      "contract_level": 4,
+      "attempts": [],
+      "children": [],
+      "final_result": {
+        "status": "success",
+        "output": {
+          "value": "Amy Coney Barrett",
+          "certificate": {
+            "method": "enumerate_filter",
+            "cited_obligation_triples": {
+              "0": "t-0002",
+              "1": "t-0003"
+            },
+            "candidate_table": [
+              {
+                "candidate": "Neil Gorsuch",
+                "satisfies": false,
+                "reason": "unsatisfied obligations: 1",
+                "obligation_status": {
+                  "0": {
+                    "obligation": {
+                      "predicate_contains": "appointed",
+                      "object_contains": "Trump",
+                      "description": "value was appointed by Donald Trump"
+                    },
+                    "triple_id": "t-0000",
+                    "satisfied": true
+                  },
+                  "1": {
+                    "obligation": {
+                      "predicate_contains": "father",
+                      "object_first_word": "Michael",
+                      "description": "value's father is a person whose first name is Michael"
+                    },
+                    "triple_id": null,
+                    "satisfied": false
+                  }
+                },
+                "accepted_triples": [
+                  "t-0000"
+                ],
+                "rejected_triples": []
+              },
+              {
+                "candidate": "Brett Kavanaugh",
+                "satisfies": false,
+                "reason": "unsatisfied obligations: 1",
+                "obligation_status": {
+                  "0": {
+                    "obligation": {
+                      "predicate_contains": "appointed",
+                      "object_contains": "Trump",
+                      "description": "value was appointed by Donald Trump"
+                    },
+                    "triple_id": "t-0001",
+                    "satisfied": true
+                  },
+                  "1": {
+                    "obligation": {
+                      "predicate_contains": "father",
+                      "object_first_word": "Michael",
+                      "description": "value's father is a person whose first name is Michael"
+                    },
+                    "triple_id": null,
+                    "satisfied": false
+                  }
+                },
+                "accepted_triples": [
+                  "t-0001"
+                ],
+                "rejected_triples": [
+                  {
+                    "obligation": 0,
+                    "candidate_proposal": {
+                      "subject": "Brett Kavanaugh",
+                      "predicate": "appointed",
+                      "object": "Trump",
+                      "source": "wiki:Brett Kavanaugh",
+                      "excerpt": "He was nominated by President Donald Trump on July 9, 2018, and has served since October 6, 2018. He was previously a United States circuit judge of the United States Court of Appeals for the District of Columbia Circuit from 2006 to 2018.\nKa"
+                    },
+                    "error": "no mention of canonical subject 'Brett Kavanaugh' found in the excerpt. Tried: ['Kavanaugh', 'Brett Kavanaugh']. Either pick an excerpt that contains one of these forms, or supply `aliases` with an al"
+                  },
+                  {
+                    "obligation": 1,
+                    "candidate_proposal": {
+                      "subject": "Brett Kavanaugh",
+                      "predicate": "father",
+                      "object": "Michael Kavanaugh",
+                      "source": "wiki:Brett Kavanaugh",
+                      "excerpt": "Brett Michael Kavanaugh (; born February 12, 1965) is an American lawyer and jurist serving as an associate justice of the Supreme Court of the United States. He was nominated by President Donald Trump on July 9,"
+                    },
+                    "error": "the excerpt does not support predicate 'father'. Judge: classifier rejected: The chosen candidate does not directly establish a father relationship; 'born' does not imply fatherhood as the cue does no"
+                  },
+                  {
+                    "obligation": 1,
+                    "candidate_proposal": {
+                      "subject": "Brett Kavanaugh",
+                      "predicate": "father",
+                      "object": "Michael Murphy",
+                      "source": "wiki:Brett Kavanaugh",
+                      "excerpt": "ish Catholic descent on both sides of his family. His paternal great-grandfather Patrick Kavanaugh immigrated to Connecticut from Roscommon, Ireland, in 1878, and his maternal great-great-grandfather Michael Murphy and his wife immigrated from Ireland to New Jersey. Kavanaugh's father was a lawyer and served as the president of the Cosmetic, Toiletry and Fragrance Association for two decades. His mother"
+                    },
+                    "error": "the excerpt does not support predicate 'father'. Judge: no candidate witness spans could be generated from the excerpt (missing subject alias, object alias, or allowed predicate cue). Pick a predicate"
+                  }
+                ]
+              },
+              {
+                "candidate": "Amy Coney Barrett",
+                "satisfies": true,
+                "reason": "all obligations satisfied",
+                "obligation_status": {
+                  "0": {
+                    "obligation": {
+                      "predicate_contains": "appointed",
+                      "object_contains": "Trump",
+                      "description": "value was appointed by Donald Trump"
+                    },
+                    "triple_id": "t-0002",
+                    "satisfied": true
+                  },
+                  "1": {
+                    "obligation": {
+                      "predicate_contains": "father",
+                      "object_first_word": "Michael",
+                      "description": "value's father is a person whose first name is Michael"
+                    },
+                    "triple_id": "t-0003",
+                    "satisfied": true
+                  }
+                },
+                "accepted_triples": [
+                  "t-0002",
+                  "t-0003"
+                ],
+                "rejected_triples": [
+                  {
+                    "obligation": 0,
+                    "candidate_proposal": {
+                      "subject": "Amy Coney Barrett",
+                      "predicate": "appointed",
+                      "object": "Trump",
+                      "source": "wiki:Amy Coney Barrett",
+                      "excerpt": "ny for Barrett's nomination\nZiklag (organization)\n\n\n== References ==\n\n\n== Further reading ==\nUnited States Senate Committee on the Judiciary, Questionnaire for the Nominee to the Court of Appeals for Amy Coney Barrett 115th Cong., 1st Sess., September 2017\n\u2014\u2014\u2014, Questionnaire for the Nominee to the Supreme Court for Amy Coney Barrett, 116th Cong., 2nd Sess., September 2020\nCongressional Research Service Legal Sideb"
+                    },
+                    "error": "no mention of canonical object 'Trump' found in the excerpt. Tried: ['Trump']. Either pick an excerpt that contains one of these forms, or supply `aliases` with an alternative surface form the excerpt"
+                  }
+                ]
+              }
+            ]
+          },
+          "supporting_triple_ids": [
+            "t-0000",
+            "t-0001",
+            "t-0002",
+            "t-0003"
+          ]
+        },
+        "artifacts": {},
+        "cost": {},
+        "notes": "executor selected 'Amy Coney Barrett'"
+      },
+      "final_verdict": {
+        "kind": "Accept",
+        "reason": "executor: 'justice' = 'Amy Coney Barrett'",
+        "record": {
+          "verifier": "entity_constraint_executor"
+        }
+      },
+      "slot_table": {}
+    },
+    {
+      "task_id": "T24d1bae7",
+      "parent_id": "T1eac22e5",
+      "contract": {
+        "goal": "Acquire evidence for the 'college' slot.\n\nUNDERGRADUATE college attended by the selected justice. NOT law school. NOT graduate school. For Amy Coney Barrett the correct answer is Rhodes College; Notre Dame is her law school, not her undergrad.\n\nUse propose_triples (not add_triple) so canonical/mention resolution runs. Focus your wiki_windows_around searches on these terms: ['undergraduate', 'graduated', 'alma mater', 'attended', 'Rhodes']. Consumed slots already resolved: {'justice': 'Amy Coney Barrett'}. You do NOT need to package the answer perfectly \u2014 once you have added a relevant accepted triple to the graph, the runtime will mechanically certify the slot. Aim to add at least one well-supported triple linking ['Amy Coney Barrett'] via an allowed relation to the next entity.",
+        "output_schema": {
+          "type": "object",
+          "required": [
+            "value",
+            "certificate",
+            "supporting_triple_ids"
+          ],
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "certificate": {
+              "type": "object",
+              "required": [
+                "method",
+                "cited_obligation_triples"
+              ],
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "cited_obligation_triples": {
+                  "type": "object"
+                },
+                "candidate_table": {
+                  "type": "array"
+                },
+                "search_ledger": {
+                  "type": "array"
+                }
+              }
+            },
+            "supporting_triple_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "verifier": "slot_certificate",
+        "success_criteria": [],
+        "inputs": {
+          "kind": "slot_research_task",
+          "slot_name": "college",
+          "slot_spec": {
+            "name": "college",
+            "description": "UNDERGRADUATE college attended by the selected justice. NOT law school. NOT graduate school. For Amy Coney Barrett the correct answer is Rhodes College; Notre Dame is her law school, not her undergrad.",
+            "consumes": [
+              "justice"
+            ],
+            "subject_slot": "justice",
+            "operation": "relation_follow",
+            "allowed_predicates": [
+              "attended",
+              "graduated from",
+              "alma mater",
+              "undergraduate",
+              "received BA"
+            ],
+            "disallowed_predicates": [
+              "law school attended",
+              "law school",
+              "graduate school attended",
+              "graduate school",
+              "J.D. from",
+              "law degree from",
+              "Juris Doctor",
+              "JD from"
+            ],
+            "disallowed_objects": [
+              "Notre Dame Law School",
+              "law school"
+            ],
+            "uniqueness": "exactly_one",
+            "acquisition_search_terms": [
+              "undergraduate",
+              "graduated",
+              "alma mater",
+              "attended",
+              "Rhodes"
+            ],
+            "proof_obligations": [
+              {
+                "predicate_contains": "attended",
+                "object_contains": "",
+                "description": "justice attended this college as undergrad"
+              }
+            ],
+            "preferred_method": "direct_lookup"
+          },
+          "consumed_slots": {
+            "justice": "Amy Coney Barrett"
+          }
+        },
+        "allowed_tools": [
+          "propose_triples",
+          "query_graph",
+          "wiki_search",
+          "wiki_read",
+          "wiki_find",
+          "wiki_windows_around"
+        ],
+        "budget": {
+          "max_llm_calls": 20,
+          "max_children": 0,
+          "max_depth": 1
+        },
+        "repair_policy": {
+          "enabled": true,
+          "max_attempts": 2
+        },
+        "deps": []
+      },
+      "contract_level": 3,
+      "attempts": [
+        {
+          "attempt_no": 1,
+          "result": {
+            "status": "success",
+            "output": {
+              "value": "Rhodes College",
+              "certificate": {
+                "method": "direct_lookup",
+                "cited_obligation_triples": {
+                  "0": "t-0004"
+                },
+                "candidate_table": [],
+                "search_ledger": []
+              },
+              "supporting_triple_ids": [
+                "t-0004",
+                "t-0005"
+              ]
+            },
+            "artifacts": {},
+            "cost": {
+              "llm_calls": 7,
+              "tool_calls": 7
+            },
+            "notes": ""
+          },
+          "verdict": {
+            "kind": "RejectWithRepairHint",
+            "reason": "obligation [0] cites triple 't-0004' whose subject 'Amy Coney Barrett' does not overlap value 'Rhodes College'",
+            "hint": "The certifying triple's subject must reference the slot value. Find a triple where the subject is (or overlaps) 'Rhodes College'.",
+            "missing_requirements": [
+              "triple about 'Rhodes College' for obligation 0"
+            ],
+            "record": {}
+          },
+          "repair_hint": null,
+          "cost": {
+            "llm_calls": 7,
+            "tool_calls": 7
+          }
+        },
+        {
+          "attempt_no": 2,
+          "result": {
+            "status": "success",
+            "output": {
+              "value": "Rhodes College",
+              "certificate": {
+                "method": "direct_lookup",
+                "cited_obligation_triples": {
+                  "0": "t-0006"
+                },
+                "candidate_table": [],
+                "search_ledger": []
+              },
+              "supporting_triple_ids": [
+                "t-0006"
+              ]
+            },
+            "artifacts": {},
+            "cost": {
+              "llm_calls": 4,
+              "tool_calls": 4
+            },
+            "notes": ""
+          },
+          "verdict": {
+            "kind": "RejectWithRepairHint",
+            "reason": "obligation [0] cites triple 't-0006' whose subject 'Amy Coney Barrett' does not overlap value 'Rhodes College'",
+            "hint": "The certifying triple's subject must reference the slot value. Find a triple where the subject is (or overlaps) 'Rhodes College'.",
+            "missing_requirements": [
+              "triple about 'Rhodes College' for obligation 0"
+            ],
+            "record": {}
+          },
+          "repair_hint": "The certifying triple's subject must reference the slot value. Find a triple where the subject is (or overlaps) 'Rhodes College'.\nMissing: triple about 'Rhodes College' for obligation 0",
+          "cost": {
+            "llm_calls": 4,
+            "tool_calls": 4
+          }
+        }
+      ],
+      "children": [],
+      "final_result": {
+        "status": "success",
+        "output": {
+          "value": "Rhodes College",
+          "certificate": {
+            "method": "direct_lookup",
+            "cited_obligation_triples": {
+              "0": "t-0006"
+            },
+            "candidate_table": [],
+            "search_ledger": []
+          },
+          "supporting_triple_ids": [
+            "t-0006"
+          ]
+        },
+        "artifacts": {},
+        "cost": {
+          "llm_calls": 4,
+          "tool_calls": 4
+        },
+        "notes": ""
+      },
+      "final_verdict": {
+        "kind": "RejectWithRepairHint",
+        "reason": "obligation [0] cites triple 't-0006' whose subject 'Amy Coney Barrett' does not overlap value 'Rhodes College'",
+        "hint": "The certifying triple's subject must reference the slot value. Find a triple where the subject is (or overlaps) 'Rhodes College'.",
+        "missing_requirements": [
+          "triple about 'Rhodes College' for obligation 0"
+        ],
+        "record": {}
+      },
+      "slot_table": {}
+    },
+    {
+      "task_id": "T45dff940",
+      "parent_id": "T1eac22e5",
+      "contract": {
+        "goal": "relation_follow salvage: 'college'",
+        "output_schema": null,
+        "verifier": null,
+        "success_criteria": [],
+        "inputs": {
+          "kind": "relation_follow_salvage",
+          "slot_name": "college"
+        },
+        "allowed_tools": null,
+        "budget": {
+          "max_llm_calls": 0,
+          "max_children": 0,
+          "max_depth": 1
+        },
+        "repair_policy": {
+          "enabled": false,
+          "max_attempts": 3
+        },
+        "deps": []
+      },
+      "contract_level": 4,
+      "attempts": [],
+      "children": [],
+      "final_result": {
+        "status": "success",
+        "output": {
+          "value": "Rhodes College",
+          "certificate": {
+            "method": "relation_follow",
+            "cited_obligation_triples": {
+              "0": "t-0004"
+            },
+            "candidate_table": [
+              {
+                "id": "t-0004",
+                "subject": "Amy Coney Barrett",
+                "predicate": "attended",
+                "object": "Rhodes College",
+                "source": "wiki:Amy Coney Barrett",
+                "excerpt": "After high school, Barrett attended Rhodes College in Memphis, Tennessee, where she majored in English literature and minored in French.",
+                "judge_reason": "witness span: After high school, Barrett attended Rhodes College in Memphis, Tenness",
+                "subject_mention": "Barrett"
+              }
+            ]
+          },
+          "supporting_triple_ids": [
+            "t-0004"
+          ]
+        },
+        "artifacts": {},
+        "cost": {},
+        "notes": "salvaged after child: single graph triple satisfies: ('Amy Coney Barrett', 'attended', 'Rhodes College') -> slot value = 'Rhodes College'"
+      },
+      "final_verdict": {
+        "kind": "Accept",
+        "reason": "relation_follow (salvage): 'college' = 'Rhodes College'",
+        "record": {
+          "verifier": "relation_follow_graph_salvage"
+        }
+      },
+      "slot_table": {}
+    },
+    {
+      "task_id": "T9f273767",
+      "parent_id": "T1eac22e5",
+      "contract": {
+        "goal": "Acquire evidence for the 'founder' slot.\n\nperson who founded the mock trial program at the selected college\n\nUse propose_triples (not add_triple) so canonical/mention resolution runs. Focus your wiki_windows_around searches on these terms: ['mock trial', 'founded', 'founder', 'program']. Consumed slots already resolved: {'college': 'Rhodes College'}. You do NOT need to package the answer perfectly \u2014 once you have added a relevant accepted triple to the graph, the runtime will mechanically certify the slot. Aim to add at least one well-supported triple linking ['Rhodes College'] via an allowed relation to the next entity.",
+        "output_schema": {
+          "type": "object",
+          "required": [
+            "value",
+            "certificate",
+            "supporting_triple_ids"
+          ],
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "certificate": {
+              "type": "object",
+              "required": [
+                "method",
+                "cited_obligation_triples"
+              ],
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "cited_obligation_triples": {
+                  "type": "object"
+                },
+                "candidate_table": {
+                  "type": "array"
+                },
+                "search_ledger": {
+                  "type": "array"
+                }
+              }
+            },
+            "supporting_triple_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "verifier": "slot_certificate",
+        "success_criteria": [],
+        "inputs": {
+          "kind": "slot_research_task",
+          "slot_name": "founder",
+          "slot_spec": {
+            "name": "founder",
+            "description": "person who founded the mock trial program at the selected college",
+            "consumes": [
+              "college"
+            ],
+            "subject_slot": "college",
+            "operation": "relation_follow",
+            "value_position": "either",
+            "value_canonicalization": "person",
+            "subject_aliases": [
+              "mock trial program",
+              "mock trial team",
+              "mock trial",
+              "program"
+            ],
+            "allowed_predicates": [
+              "founded by",
+              "founded",
+              "founder",
+              "established"
+            ],
+            "disallowed_predicates": [
+              "provides",
+              "offers",
+              "hosts"
+            ],
+            "uniqueness": "exactly_one",
+            "acquisition_search_terms": [
+              "mock trial",
+              "founded",
+              "founder",
+              "program"
+            ],
+            "proof_obligations": [
+              {
+                "predicate_contains": "founded",
+                "object_contains": "",
+                "description": "value founded the mock trial program"
+              }
+            ],
+            "preferred_method": "direct_lookup"
+          },
+          "consumed_slots": {
+            "college": "Rhodes College"
+          }
+        },
+        "allowed_tools": [
+          "propose_triples",
+          "query_graph",
+          "wiki_search",
+          "wiki_read",
+          "wiki_find",
+          "wiki_windows_around"
+        ],
+        "budget": {
+          "max_llm_calls": 20,
+          "max_children": 0,
+          "max_depth": 1
+        },
+        "repair_policy": {
+          "enabled": true,
+          "max_attempts": 2
+        },
+        "deps": []
+      },
+      "contract_level": 3,
+      "attempts": [
+        {
+          "attempt_no": 1,
+          "result": {
+            "status": "success",
+            "output": {
+              "value": "Marcus Pohlmann",
+              "certificate": {
+                "method": "direct_lookup",
+                "cited_obligation_triples": {
+                  "0": "t-0007"
+                },
+                "candidate_table": [],
+                "search_ledger": []
+              },
+              "supporting_triple_ids": [
+                "t-0007"
+              ]
+            },
+            "artifacts": {},
+            "cost": {
+              "llm_calls": 9,
+              "tool_calls": 9
+            },
+            "notes": ""
+          },
+          "verdict": {
+            "kind": "Accept",
+            "reason": "slot 'founder' = 'Marcus Pohlmann' certified by 1 obligation(s)",
+            "record": {
+              "verifier": "slot_certificate",
+              "slot_name": "founder",
+              "value": "Marcus Pohlmann",
+              "method": "direct_lookup",
+              "obligations_satisfied": [
+                {
+                  "obligation_index": 0,
+                  "obligation": {
+                    "predicate_contains": "founded",
+                    "object_contains": "",
+                    "description": "value founded the mock trial program"
+                  },
+                  "triple_id": "t-0007",
+                  "triple": {
+                    "id": "t-0007",
+                    "subject": "Marcus Pohlmann",
+                    "predicate": "founded",
+                    "object": "mock trial program",
+                    "source": "wiki:Marcus Pohlmann",
+                    "excerpt": "Pohlmann is an accomplished mock trial coach. He founded the mock trial program at Rhodes in 1986 and led the program until his retirement in 2018.",
+                    "judge_reason": "witness span: Pohlmann is an accomplished mock trial coach. He founded the mock trial program at Rhodes in 1986 a",
+                    "subject_mention": "Pohlmann"
+                  }
+                }
+              ],
+              "candidate_table": [],
+              "search_ledger": []
+            }
+          },
+          "repair_hint": null,
+          "cost": {
+            "llm_calls": 9,
+            "tool_calls": 9
+          }
+        }
+      ],
+      "children": [],
+      "final_result": {
+        "status": "success",
+        "output": {
+          "value": "Marcus Pohlmann",
+          "certificate": {
+            "method": "direct_lookup",
+            "cited_obligation_triples": {
+              "0": "t-0007"
+            },
+            "candidate_table": [],
+            "search_ledger": []
+          },
+          "supporting_triple_ids": [
+            "t-0007"
+          ]
+        },
+        "artifacts": {},
+        "cost": {
+          "llm_calls": 9,
+          "tool_calls": 9
+        },
+        "notes": ""
+      },
+      "final_verdict": {
+        "kind": "Accept",
+        "reason": "slot 'founder' = 'Marcus Pohlmann' certified by 1 obligation(s)",
+        "record": {
+          "verifier": "slot_certificate",
+          "slot_name": "founder",
+          "value": "Marcus Pohlmann",
+          "method": "direct_lookup",
+          "obligations_satisfied": [
+            {
+              "obligation_index": 0,
+              "obligation": {
+                "predicate_contains": "founded",
+                "object_contains": "",
+                "description": "value founded the mock trial program"
+              },
+              "triple_id": "t-0007",
+              "triple": {
+                "id": "t-0007",
+                "subject": "Marcus Pohlmann",
+                "predicate": "founded",
+                "object": "mock trial program",
+                "source": "wiki:Marcus Pohlmann",
+                "excerpt": "Pohlmann is an accomplished mock trial coach. He founded the mock trial program at Rhodes in 1986 and led the program until his retirement in 2018.",
+                "judge_reason": "witness span: Pohlmann is an accomplished mock trial coach. He founded the mock trial program at Rhodes in 1986 a",
+                "subject_mention": "Pohlmann"
+              }
+            }
+          ],
+          "candidate_table": [],
+          "search_ledger": []
+        }
+      },
+      "slot_table": {}
+    }
+  ],
+  "final_result": {
+    "status": "success",
+    "output": {
+      "answer": "Marcus Pohlmann",
+      "slot_values": {
+        "justice": "Amy Coney Barrett",
+        "college": "Rhodes College",
+        "founder": "Marcus Pohlmann"
+      },
+      "supporting_triple_ids": [
+        "t-0000",
+        "t-0001",
+        "t-0002",
+        "t-0003",
+        "t-0004",
+        "t-0007"
+      ]
+    },
+    "artifacts": {},
+    "cost": {},
+    "notes": "chain executor: all 3 slots certified"
+  },
+  "final_verdict": {
+    "kind": "Accept",
+    "reason": "chain executor: every slot certified; answer='Marcus Pohlmann'",
+    "record": {
+      "verifier": "chain_executor",
+      "resolved_slots": {
+        "justice": "Amy Coney Barrett",
+        "college": "Rhodes College",
+        "founder": "Marcus Pohlmann"
+      },
+      "total_triples_cited": 6
+    }
+  },
+  "slot_table": {
+    "justice": "Amy Coney Barrett",
+    "college": "Rhodes College",
+    "founder": "Marcus Pohlmann"
+  }
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 1,
+    "verdict_kind": "Escalate",
+    "answer": "",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": false,
+      "answer_correct": false,
+      "coverage": 2
+    },
+    "metrics": {
+      "llm_calls": 48,
+      "tool_calls": 51,
+      "attempts": 4,
+      "repairs": 2,
+      "rejections": 4,
+      "task_nodes": 5,
+      "max_depth_seen": 1,
+      "direct_children": 4
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_1",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 2,
+    "verdict_kind": "Accept",
+    "answer": "Marcus Pohlmann",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": true,
+      "answer_correct": true,
+      "coverage": 3
+    },
+    "metrics": {
+      "llm_calls": 51,
+      "tool_calls": 53,
+      "attempts": 4,
+      "repairs": 2,
+      "rejections": 3,
+      "task_nodes": 5,
+      "max_depth_seen": 1,
+      "direct_children": 4
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_2",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 3,
+    "verdict_kind": "Escalate",
+    "answer": "",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": false,
+      "answer_correct": false,
+      "coverage": 2
+    },
+    "metrics": {
+      "llm_calls": 0,
+      "tool_calls": 0,
+      "attempts": 0,
+      "repairs": 0,
+      "rejections": 0,
+      "task_nodes": 2,
+      "max_depth_seen": 1,
+      "direct_children": 1
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_3",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 4,
+    "verdict_kind": "Accept",
+    "answer": "Marcus Pohlmann",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": true,
+      "answer_correct": true,
+      "coverage": 3
+    },
+    "metrics": {
+      "llm_calls": 19,
+      "tool_calls": 19,
+      "attempts": 3,
+      "repairs": 1,
+      "rejections": 2,
+      "task_nodes": 5,
+      "max_depth_seen": 1,
+      "direct_children": 4
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_4",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 5,
+    "verdict_kind": "Escalate",
+    "answer": "",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": false,
+      "answer_correct": false,
+      "coverage": 2
+    },
+    "metrics": {
+      "llm_calls": 0,
+      "tool_calls": 0,
+      "attempts": 0,
+      "repairs": 0,
+      "rejections": 0,
+      "task_nodes": 2,
+      "max_depth_seen": 1,
+      "direct_children": 1
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_5",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 6,
+    "verdict_kind": "Accept",
+    "answer": "Marcus Pohlmann",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": true,
+      "answer_correct": true,
+      "coverage": 3
+    },
+    "metrics": {
+      "llm_calls": 20,
+      "tool_calls": 20,
+      "attempts": 3,
+      "repairs": 1,
+      "rejections": 2,
+      "task_nodes": 5,
+      "max_depth_seen": 1,
+      "direct_children": 4
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_6",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 7,
+    "verdict_kind": "Accept",
+    "answer": "Marcus Pohlmann",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": true,
+      "answer_correct": true,
+      "coverage": 3
+    },
+    "metrics": {
+      "llm_calls": 28,
+      "tool_calls": 28,
+      "attempts": 3,
+      "repairs": 1,
+      "rejections": 2,
+      "task_nodes": 5,
+      "max_depth_seen": 1,
+      "direct_children": 4
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_7",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 8,
+    "verdict_kind": "Escalate",
+    "answer": "",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": false,
+      "answer_correct": false,
+      "coverage": 2
+    },
+    "metrics": {
+      "llm_calls": 0,
+      "tool_calls": 0,
+      "attempts": 0,
+      "repairs": 0,
+      "rejections": 0,
+      "task_nodes": 2,
+      "max_depth_seen": 1,
+      "direct_children": 1
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_8",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 9,
+    "verdict_kind": "Escalate",
+    "answer": "",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": false,
+      "answer_correct": false,
+      "coverage": 2
+    },
+    "metrics": {
+      "llm_calls": 28,
+      "tool_calls": 29,
+      "attempts": 3,
+      "repairs": 1,
+      "rejections": 3,
+      "task_nodes": 5,
+      "max_depth_seen": 1,
+      "direct_children": 4
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_9",
+    "error": ""
+  },
+  {
+    "mode": "oracle_chain_executor",
+    "run_id": 10,
+    "verdict_kind": "Accept",
+    "answer": "Marcus Pohlmann",
+    "path": {
+      "justice_found": true,
+      "college_found": true,
+      "founder_found": true,
+      "answer_correct": true,
+      "coverage": 3
+    },
+    "metrics": {
+      "llm_calls": 20,
+      "tool_calls": 20,
+      "attempts": 3,
+      "repairs": 1,
+      "rejections": 2,
+      "task_nodes": 5,
+      "max_depth_seen": 1,
+      "direct_children": 4
+    },
+    "proof_dir": "task_runtime/examples/_mock_trial_output\\oracle_chain_executor\\run_10",
+    "error": ""
+  }
+]

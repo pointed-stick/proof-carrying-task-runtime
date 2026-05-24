@@ -1,0 +1,16 @@
+[
+  {
+    "mode": "F2",
+    "passed": true,
+    "founder_value": "Professor Marcus Pohlmann",
+    "verdict": "Accept",
+    "verdict_reason": "slot 'founder' = 'Professor Marcus Pohlmann' certified by 1 obligation(s)",
+    "triples_in_graph": 1,
+    "rejected_attempts": 4,
+    "first_rejection_reasons": [
+      "the excerpt does not support predicate 'founded'. Judge: no candidate witness spans could be generated from the excerpt ",
+      "the excerpt does not support predicate 'founded by'. Judge: no candidate witness spans could be generated from the excer",
+      "no mention of canonical object 'mock trial program' found in the excerpt. Tried: ['mock trial program', 'trial program',"
+    ]
+  }
+]

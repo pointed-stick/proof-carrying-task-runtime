@@ -1,0 +1,82 @@
+[
+  {
+    "id": "t-0000",
+    "subject": "Neil Gorsuch",
+    "predicate": "appointed",
+    "object": "Trump",
+    "source": "wiki:Neil Gorsuch",
+    "excerpt": "He was nominated by President Donald Trump on January 31, 2017, and has served since April 10, 2017.\nGorsuch spent his early life in Denver, Colorado. After graduating from Columbia University, where he became an established writer, Gorsuch r",
+    "judge_reason": "witness span: He was nominated by President Donald Trump on January 31, 2017, and has served since April 10, 2017.\nGorsuch spent his e",
+    "subject_mention": "Gorsuch"
+  },
+  {
+    "id": "t-0001",
+    "subject": "Brett Kavanaugh",
+    "predicate": "appointed",
+    "object": "Trump",
+    "source": "wiki:Brett Kavanaugh",
+    "excerpt": "President Trump nominated Kavanaugh to the United States Supreme Court on July 9, 2018, to fill the position vacated by Justice Anthony Kennedy. Before his United States Senate confirmation proceedings began, Christ",
+    "judge_reason": "witness span: President Trump nominated Kavanaugh to the United States Supreme Court on July 9, 2018, to fill the position vacated by ",
+    "subject_mention": "Kavanaugh"
+  },
+  {
+    "id": "t-0002",
+    "subject": "Amy Coney Barrett",
+    "predicate": "appointed",
+    "object": "Trump",
+    "source": "wiki:Amy Coney Barrett",
+    "excerpt": "The fifth woman to serve on the court, she was nominated by President Donald Trump. She was a United States circuit judge of the United States Court of Appeals for the Seventh Circuit from 2017 to 2020.\nBarrett graduated from Rhodes College before attending Notre Dame Law School, e",
+    "judge_reason": "witness span: the court, she was nominated by President Donald Trump. She was a United States circuit judge of the United States Court",
+    "subject_mention": "Barrett"
+  },
+  {
+    "id": "t-0003",
+    "subject": "Amy Coney Barrett",
+    "predicate": "father",
+    "object": "Michael Coney",
+    "source": "wiki:Amy Coney Barrett",
+    "excerpt": "ial cases. She published her first book, Listening to the Law, in September 2025.\n\n\n== Early life and education ==\nAmy Vivian Coney was born in 1972 in New Orleans, Louisiana, to Linda (n\u00e9e Vath) and Michael Coney. The eldest of seven children, she has five sisters and a brother. Her father worked as an attorney for Shell Oil Company, and her mother was a high school French teacher and homemaker. Barrett",
+    "judge_reason": "witness span: She published her first book, Listening to the Law, in September 2025.\n\n\n== Early life and education ==\nAmy Vivian Coney",
+    "subject_mention": "Amy Vivian Coney"
+  },
+  {
+    "id": "t-0004",
+    "subject": "Amy Coney Barrett",
+    "predicate": "attended",
+    "object": "Rhodes College",
+    "source": "wiki:Amy Coney Barrett",
+    "excerpt": "After high school, Barrett attended Rhodes College in Memphis, Tennessee, where she majored in English literature and minored in French.",
+    "judge_reason": "witness span: After high school, Barrett attended Rhodes College in Memphis, Tenness",
+    "subject_mention": "Barrett"
+  },
+  {
+    "id": "t-0005",
+    "subject": "Amy Coney Barrett",
+    "predicate": "graduated",
+    "object": "Rhodes College",
+    "source": "wiki:Amy Coney Barrett",
+    "excerpt": "Barrett graduated from Rhodes College before attending Notre Dame Law School, earning a Juris Doctor (J.D.) degree in 1997 and ranked first in her class.",
+    "judge_reason": "witness span: Barrett graduated from Rhodes College before attending No",
+    "subject_mention": "Barrett"
+  },
+  {
+    "id": "t-0006",
+    "subject": "Amy Coney Barrett",
+    "predicate": "attended",
+    "object": "Rhodes College",
+    "source": "wiki:Amy_Coney_Barrett",
+    "excerpt": "Barrett graduated from Rhodes College before attending Notre Dame Law School, earning a Juris Doctor (J.D.) degree in 1997 and ranked first in her class.",
+    "judge_reason": "witness span: Barrett graduated from Rhodes College before attending No",
+    "subject_mention": "Barrett"
+  },
+  {
+    "id": "t-0007",
+    "subject": "Marcus Pohlmann",
+    "predicate": "founded",
+    "object": "mock trial program",
+    "source": "wiki:Marcus Pohlmann",
+    "excerpt": "Pohlmann is an accomplished mock trial coach. He founded the mock trial program at Rhodes in 1986 and led the program until his retirement in 2018.",
+    "judge_reason": "witness span: Pohlmann is an accomplished mock trial coach. He founded the mock trial program at Rhodes in 1986 a",
+    "subject_mention": "Pohlmann"
+  }
+]

@@ -1,0 +1,21 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Runtime-generated demo workspaces and outputs.
+# The demos all create these on the fly under task_runtime/examples/; they
+# should never be committed. Patterns are anchored to the leading underscore
+# so they don't accidentally catch task_runtime/examples/sample_outputs/
+# (which IS shipped, as the frozen v1.2 research artifact).
+_*_workspace/
+_*_output/
+
+# Editor/IDE
+.vscode/
+.idea/
+.claude/
+
+# Local env
+.env
